@@ -14,7 +14,7 @@ int no_of_time_roated(int arr[], int n)
     next = (mid + 1) % n;
     prev = (mid - 1 + n) % n;
 
-    if (arr[mid] < prev && arr[mid] < next)
+    if (arr[mid] < arr[prev] && arr[mid] < arr[next])
     {
       return mid;
     }
@@ -59,11 +59,14 @@ int binary_search(int arr[], int s, int e, int key)
 int main()
 {
 
-  int arr[] = {15, 18, 19, 20, 21, 1, 2, 3, 5, 6, 7};
+  // int arr[] = {15, 18, 19, 20, 21, 1, 2, 3, 5, 6, 7};
+  int arr[] = {4,5,6,7,0,1,2};
+
   int n = sizeof(arr) / sizeof(arr[0]);
 
-  int target = 5;
+  int target = 0;
   int index = no_of_time_roated(arr, n);
+  cout<<index<<endl;
 
   if (arr[index] == target)
   {
