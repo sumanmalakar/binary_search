@@ -58,15 +58,13 @@ int binary_search(int arr[], int s, int e, int key)
 
 int main()
 {
-
-  // int arr[] = {15, 18, 19, 20, 21, 1, 2, 3, 5, 6, 7};
-  int arr[] = {4,5,6,7,0,1,2};
+  int arr[] = {2, 5, 6, 0, 0, 1, 2};
 
   int n = sizeof(arr) / sizeof(arr[0]);
 
   int target = 0;
   int index = no_of_time_roated(arr, n);
-  cout<<index<<endl;
+  cout<<"min_element_index = "<<index<<endl;
 
   if (arr[index] == target)
   {
